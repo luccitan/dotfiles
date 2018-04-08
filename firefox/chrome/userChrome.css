@@ -1,0 +1,12 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+.bookmark-item:not([container]):not(:hover):not([open="true"]) > .toolbarbutton-text {
+    display: none !important;
+}
+#PlacesToolbarItems > .bookmark-item::not([container]):not(:hover):not([open="true"]) > .toolbarbutton-icon[label]:not([label=""]) {
+    margin-inline-end: 0px !important;
+}
+
+.bookmark-item > .toolbarbutton-text {
+    margin-top: -1px !important;
+}

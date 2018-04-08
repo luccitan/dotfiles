@@ -1,0 +1,36 @@
+tap "homebrew/core"
+tap "homebrew/bundle"
+tap "caskroom/versions"
+tap "caskroom/cask"
+
+# Development
+brew "git"
+brew "node"
+brew "python@2"
+brew "python3"
+brew "yarn"
+
+# Shell software and eanager
+brew "zsh"
+brew "zsh-completions"
+brew "zplug"
+
+# CLI utils
+brew "rclone"
+brew "tree"
+brew "colordiff"
+
+# Computer customizing
+brew "crisidev/homebrew-chunkwm/chunkwm"
+brew "koekeishiya/khd/skhd"
+
+# Web browsers
+cask "firefox"
+
+# Media players
+cask "iina"
+cask "spotify"
+
+# Misc.
+cask "selfcontrol"
+brew "pandoc"
