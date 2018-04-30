@@ -8,6 +8,7 @@ brew "git"
 brew "node"
 brew "python@2"
 brew "python3"
+brew "ipython"
 brew "yarn"
 
 # Shell software and eanager

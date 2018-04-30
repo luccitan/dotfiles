@@ -22,7 +22,9 @@ link "${HOME}/.dotfiles/.zshrc" "${HOME}/.zshrc"
 if [[ $(uname) == 'Darwin' ]]; then
   link "${HOME}/.dotfiles/skhd/.skhdrc" "${HOME}/.skhrc"
   link "${HOME}/.dotfiles/chunkwm/.chunkwmrc" "${HOME}/.chunkwmrc"
+  link "${HOME}/.dotfiles/iTerm2/DynamicProfiles" "${HOME}/Library/Application\ Support/iTerm2/DynamicProfiles" 
 fi
+
 
 ################################################################################
 ################################################################################
