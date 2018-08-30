@@ -10,21 +10,14 @@ brew "python@2"
 brew "python3"
 brew "ipython"
 brew "yarn"
-brew "awscli"
 
 # Shell software and eanager
 brew "zsh"
-brew "zsh-completions"
-brew "zplug"
 
 # CLI utils
 brew "rclone"
 brew "tree"
 brew "colordiff"
-
-# Computer customizing
-brew "crisidev/homebrew-chunkwm/chunkwm"
-brew "koekeishiya/khd/skhd"
 
 # Web browsers
 cask "firefox"
@@ -35,4 +28,3 @@ cask "spotify"
 
 # Misc.
 cask "selfcontrol"
-brew "pandoc"
