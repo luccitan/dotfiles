@@ -1,0 +1,19 @@
+export ZPLUG_HOME=$(brew --prefix)/opt/zplug
+source $ZPLUG_HOME/init.zsh
+
+zplug "saravanabalagi/zsh-theme-modesty", as:theme
+
+zplug "saravanabalagi/zsh-plugin-condaenv", as:plugin
+zplug "esc/conda-zsh-completion", as:plugin
+zplug "zsh-users/zsh-completions", as:plugin
+zplug "zpm-zsh/ssh", as:plugin
+
+# Install plugins if there are plugins that have not been installed
+if ! zplug check --verbose; then
+    printf "Install? [y/N]: "
+    if read -q; then
+        echo; zplug install
+    fi
+fi
+
+zplug load

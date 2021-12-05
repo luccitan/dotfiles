@@ -1,0 +1,28 @@
+# Send ESC (\x1b) before characters when alt is pressed.
+alt_send_esc: false
+
+key_bindings:
+
+  # MacOS bindings
+  - { key: Equals,    mods: Command,    action: DecreaseFontSize              }
+  - { key: Slash,     mods: Command,    action: IncreaseFontSize              }
+  - { key: A,         mods: Command,    action: Quit                          }
+  - { key: Z,         mods: Command,    action: Quit                          }
+  - { key: L,         mods: Alt|Shift,  chars: "|"                            }
+  - { key: Key5,      mods: Alt,        chars: "{"                            }
+  - { key: Minus,     mods: Alt,        chars: "}"                            }
+  - { key: Key5,      mods: Alt|Shift,  chars: "["                            }
+  - { key: Minus,     mods: Alt|Shift,  chars: "]"                            }
+  - { key: N,         mods: Alt,        chars: "~"                            }
+  - { key: Period,    mods: Alt|Shift,  chars: "\\"                           }
+  # MacOS French bindings
+  - { key: 19,             mods: Alt,                       chars: "~"                     }
+  - { key: 21,             mods: Alt,                       chars: "{"                     }
+  - { key: 22,             mods: Alt,                       chars: "|"                     }
+  - { key: 23,             mods: Alt,                       chars: "["                     }
+  - { key: 24,             mods: Alt,                       chars: "}"                     }
+  - { key: 25,             mods: Alt,                       chars: "^"                     }
+  - { key: 26,             mods: Alt,                       chars: "`"                     }
+  - { key: 27,             mods: Alt,                       chars: "]"                     }
+  - { key: 28,             mods: Alt,                       chars: "\\"                    }
+  - { key: 29,             mods: Alt,                       chars: "@"                     }
