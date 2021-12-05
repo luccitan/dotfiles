@@ -1,7 +1,8 @@
 export ZPLUG_HOME=$(brew --prefix)/opt/zplug
 source $ZPLUG_HOME/init.zsh
 
-zplug "saravanabalagi/zsh-theme-modesty", as:theme
+zplug "mafredri/zsh-async", from:github
+zplug "sindresorhus/pure", use:pure.zsh, from:github, as:theme
 
 zplug "saravanabalagi/zsh-plugin-condaenv", as:plugin
 zplug "esc/conda-zsh-completion", as:plugin
