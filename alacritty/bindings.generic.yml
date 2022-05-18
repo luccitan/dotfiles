@@ -11,8 +11,8 @@ key_bindings:
   - { key: Equals,   mods: Super|Shift, action: IncreaseFontSize       }
   - { key: Minus,    mods: Super, action: DecreaseFontSize             }
   # Mappings for tmux facility , using Cmd instead of Ctrl (\x14 being Ctrl-T)
-  - { key: D,        mods: Command|Shift,        chars: "\x14\x76"      }
   - { key: D,        mods: Command,              chars: "\x14\x68"      }
+  - { key: D,        mods: Command|Shift,        chars: "\x14\x76"      }
   - { key: X,        mods: Command,              chars: "\x14\x78"      }
   - { key: Key1,     mods: Command,              chars: "\x14\x31"      }
   - { key: Key2,     mods: Command,              chars: "\x14\x32"      }
