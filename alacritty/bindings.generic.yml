@@ -24,7 +24,9 @@ key_bindings:
   - { key: Key8,     mods: Command,              chars: "\x14\x38"      }
   - { key: Key9,     mods: Command,              chars: "\x14\x39"      }
   - { key: W,        mods: Command,              chars: "\x14\x26"      }
-  - { key: Up,       mods: Alt,                  chars: "\x1b[1;3A"     }
-  - { key: Down,     mods: Alt,                  chars: "\x1b[1;3B"     }
-  - { key: Left,     mods: Alt,                  chars: "\x1b[1;3D"     }
-  - { key: Right,    mods: Alt,                  chars: "\x1b[1;3C"     }
+  - { key: Up,       mods: Command,                  chars: "\x1b[1;3A"     }
+  - { key: Down,     mods: Command,                  chars: "\x1b[1;3B"     }
+  - { key: Left,     mods: Command,                  chars: "\x1b[1;3D"     }
+  - { key: Right,    mods: Command,                  chars: "\x1b[1;3C"     }
+  - { key: Left,  mods: Alt, chars: "\x1BB" } # moving cursor word to the left
+  - { key: Right, mods: Alt, chars: "\x1BF" } # ... same for the right

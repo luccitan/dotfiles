@@ -3,11 +3,10 @@
 # - https://gist.github.com/sts10/df620672662fe4c6f03ac296a02b8e72
 
 import:
-  - ~/repositories/luccitan/dotfiles/alacritty/scheme.vscode.yml
-  - ~/repositories/luccitan/dotfiles/alacritty/bindings.generic.yml
-  - ~/repositories/luccitan/dotfiles/alacritty/bindings.macos.yml
+  - ~/dotfiles/alacritty/scheme.vscode.yml
+  - ~/dotfiles/alacritty/bindings.generic.yml
+  - ~/dotfiles/alacritty/bindings.macos.yml
 
-background_opacity: 1.0
 dynamic_title: true
 live_config_reload: true
 w_bold_text_with_bright_colors: true
@@ -42,6 +41,7 @@ mouse:
 window:
   dynamic_title: true
   dynamic_padding: false
+  opacity: 1.0
 
   dimensions:
     columns: 0
@@ -65,7 +65,7 @@ window:
 
 font:
   size: 13.5
-  use_thin_strokes: false # macOS only
+  AppleFontSmoothing: false # macOS only
 
   normal:
     family: Iosevka
