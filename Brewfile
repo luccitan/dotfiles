@@ -1,28 +1,28 @@
 # Terminal/shell customisation
 brew "tmux"
-brew "zplug"
 brew "zsh"
+
+# Generic helpers
+brew "fzf"
 
 # CLI tools
 brew "git"
 brew "jq"
 brew "minio/stable/mc"
-brew "procs"
 brew "watch"
 brew "yarn"
 
 # CLI helpers / documentation
-brew "cheat"
 brew "tldr"
+brew "navi"
 
 # CLI replacements tools
 brew "bat"
-brew "bottom"
 brew "duf"
 brew "exa"
 brew "gping"
 brew "htop"
-brew "zoxide"
+brew "procs"
 
 # Cask
 cask "alacritty"
