@@ -1,0 +1,42 @@
+. ~/dotfiles/shell/interactive
+
+##########################################
+# zcomet activation:
+# Clone zcomet if necessary
+if [[ ! -f ${ZDOTDIR:-${HOME}}/.zcomet/bin/zcomet.zsh ]]; then
+  command git clone https://github.com/agkozak/zcomet.git ${ZDOTDIR:-${HOME}}/.zcomet/bin
+fi
+source ${ZDOTDIR:-${HOME}}/.zcomet/bin/zcomet.zsh
+
+##########################################
+# Installing zcomet plugins
+
+# Popular / generic zsh usage
+zcomet load zsh-users/zsh-syntax-highlighting
+zcomet load zsh-users/zsh-autosuggestions
+
+# Run compinit and compile its cache
+zcomet compinit
+
+
+### zplug export to handle
+# export ZPLUG_HOME=$(brew --prefix)/opt/zplug
+# source $ZPLUG_HOME/init.zsh
+
+# zplug "mafredri/zsh-async", from:github
+# zplug "sindresorhus/pure", use:pure.zsh, from:github, as:theme
+
+# zplug "saravanabalagi/zsh-plugin-condaenv", as:plugin
+# zplug "esc/conda-zsh-completion", as:plugin
+# zplug "zsh-users/zsh-completions", as:plugin
+# zplug "zpm-zsh/ssh", as:plugin
+
+# # Install plugins if there are plugins that have not been installed
+# if ! zplug check --verbose; then
+#     printf "Install? [y/N]: "
+#     if read -q; then
+#         echo; zplug install
+#     fi
+# fi
+
+# zplug load

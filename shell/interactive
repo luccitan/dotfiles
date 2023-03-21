@@ -1,0 +1,29 @@
+#############################################
+# Aliases
+
+alias fullclear='clear && printf "\e[3J"'
+alias ipy="python3 -c 'import IPython; IPython.terminal.ipapp.launch_new_instance()'"
+alias ls='exa --long --tree --all --header --git --binary --level 1'
+alias rm='rm -i'
+
+# OS/hardware specifics
+case "$(uname -sr)" in
+    Darwin*)
+        # Aliases for arch-specific homebrew commands
+        alias brew='arch -arm64 /opt/homebrew/bin/brew'
+        alias brew-x86='arch -x86_64 /usr/local/bin/brew'
+    ;;
+
+    Linux*)
+    ;;
+esac
+
+# if in a terminal
+if [ -t 0 ]; then
+    # other users shouldn't be able to message by default
+    mesg n
+
+    # enable colours
+#    if [ `tput colors` -ge 8 ]; then
+#    fi
+fi
