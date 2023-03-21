@@ -9,34 +9,15 @@ fi
 source ${ZDOTDIR:-${HOME}}/.zcomet/bin/zcomet.zsh
 
 ##########################################
-# Installing zcomet plugins
-
-# Popular / generic zsh usage
+# Plugins
+# .......
 zcomet load zsh-users/zsh-syntax-highlighting
 zcomet load zsh-users/zsh-autosuggestions
-
+zcomet load zsh-users/zsh-completions
+zcomet load sunlei/zsh-ssh
+# Load a oh-my-zsh themes
+zcomet load ohmyzsh lib theme-and-appearance.zsh
+zcomet load ohmyzsh lib git.zsh
+zcomet load ohmyzsh themes kphoen.zsh-theme
 # Run compinit and compile its cache
 zcomet compinit
-
-
-### zplug export to handle
-# export ZPLUG_HOME=$(brew --prefix)/opt/zplug
-# source $ZPLUG_HOME/init.zsh
-
-# zplug "mafredri/zsh-async", from:github
-# zplug "sindresorhus/pure", use:pure.zsh, from:github, as:theme
-
-# zplug "saravanabalagi/zsh-plugin-condaenv", as:plugin
-# zplug "esc/conda-zsh-completion", as:plugin
-# zplug "zsh-users/zsh-completions", as:plugin
-# zplug "zpm-zsh/ssh", as:plugin
-
-# # Install plugins if there are plugins that have not been installed
-# if ! zplug check --verbose; then
-#     printf "Install? [y/N]: "
-#     if read -q; then
-#         echo; zplug install
-#     fi
-# fi
-
-# zplug load

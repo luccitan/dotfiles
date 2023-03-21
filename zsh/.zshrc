@@ -2,16 +2,7 @@
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
 
-# NVM
-export NVM_DIR=~/.nvm
-source "$NVM_DIR/nvm.sh"
-
-source $HOME/.bash_profile
-source $HOME/.zplugrc
-
 source ~/dotfiles/zsh/interactive
-
-
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
