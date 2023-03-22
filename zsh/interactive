@@ -1,5 +1,9 @@
 . ~/dotfiles/shell/interactive
 
+# Misc fixes etc
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
+
 ##########################################
 # zcomet activation:
 # Clone zcomet if necessary
@@ -18,6 +22,6 @@ zcomet load sunlei/zsh-ssh
 # Load a oh-my-zsh themes
 zcomet load ohmyzsh lib theme-and-appearance.zsh
 zcomet load ohmyzsh lib git.zsh
-zcomet load ohmyzsh themes kphoen.zsh-theme
+zcomet load ohmyzsh themes candy.zsh-theme
 # Run compinit and compile its cache
 zcomet compinit
