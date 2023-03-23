@@ -1,1 +1,1 @@
-~/dotfiles/zsh/interactive
+. ~/dotfiles/zsh/interactive
