@@ -28,9 +28,8 @@ selection:
 
 cursor:
   unfocused_hollow: true
-  style: Block
-  # style: Underline
-  # style: Beam
+  style:
+    shape: Block
 
 mouse:
   hide_when_typing: false

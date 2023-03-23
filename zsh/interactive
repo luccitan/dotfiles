@@ -19,7 +19,9 @@ zcomet load zsh-users/zsh-syntax-highlighting
 zcomet load zsh-users/zsh-autosuggestions
 zcomet load zsh-users/zsh-completions
 zcomet load sunlei/zsh-ssh
+
 # Load the theme
 zcomet load sindresorhus/pure
+
 # Run compinit and compile its cache
 zcomet compinit
