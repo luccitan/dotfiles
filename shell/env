@@ -14,5 +14,3 @@ umask 0077
 ssource ~/dotfiles/shell/env_local
 ssource "$HOME/.cargo/env"
 ssource "$NVM_DIR/nvm.sh"
-
-

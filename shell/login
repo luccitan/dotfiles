@@ -19,9 +19,10 @@ export LC_NUMERIC=$LANG
 export LC_TIME=$LANG
 
 # Path settings
-#pathprepend ~/bin PATH
-#pathprepend ~/lib LD_LIBRARY_PATH
-#pathprepend ~/include CPATH
+pathappend /bin PATH
+pathappend /usr/bin PATH
+pathappend /usr/local/bin PATH
+pathappend /opt/homebrew/bin PATH
 
 # The current directory should never be in $PATH
 pathremove . PATH
