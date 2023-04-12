@@ -3,6 +3,9 @@
 .AppleDouble
 .LSOverride
 
+# Specific files
+.config/nvim/undodir
+
 # Swap files
 *.swp
 
