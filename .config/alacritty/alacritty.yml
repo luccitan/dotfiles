@@ -3,9 +3,9 @@
 # - https://gist.github.com/sts10/df620672662fe4c6f03ac296a02b8e72
 
 import:
-  - ~/dotfiles/alacritty/scheme.vscode.yml
-  - ~/dotfiles/alacritty/bindings.generic.yml
-  - ~/dotfiles/alacritty/bindings.macos.yml
+  - ~/.config/alacritty/scheme.vscode.yml
+  - ~/.config/alacritty/bindings.generic.yml
+  - ~/.config/alacritty/bindings.macos.yml
 
 dynamic_title: true
 live_config_reload: true
