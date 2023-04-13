@@ -20,6 +20,16 @@ return require('packer').startup(function(use)
 
   -- List of plugins there
   --
+  -- Generic plugins
+  --
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = function()
+            local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+            ts_update()
+    end,
+  }
+
   -- IDE-oriented plugins
   use 'sheerun/vim-polyglot'
   use {'kyazdani42/nvim-tree.lua', requires = 'kyazdani42/nvim-web-devicons'}

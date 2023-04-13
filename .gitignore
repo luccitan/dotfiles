@@ -5,6 +5,7 @@
 
 # Specific files
 .config/nvim/undodir
+.config/nvim/plugin
 
 # Swap files
 *.swp
