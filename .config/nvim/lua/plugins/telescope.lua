@@ -60,15 +60,17 @@ require('telescope').setup(
           { "relative number", ':set relativenumber!' },
           { "search highlighting (F12)", ':set hlsearch!' },
         }
+      },
+      
+      workspaces = {
+        -- keep insert mode after selection in the picker, default is false
+        keep_insert = true,
       }
     }
   }
 )
 
-require('telescope').load_extension('command_palette')
+local telescope = require('telescope')
+telescope.load_extension('command_palette')
+telescope.load_extension('workspaces')
 
-local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
-vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
-vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
-vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})

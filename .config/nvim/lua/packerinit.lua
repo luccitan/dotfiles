@@ -19,29 +19,30 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
   -- List of plugins there
-  --
+  ----------------------------------------------------------------
+
   -- Generic plugins
   --
-  use {
-    'nvim-treesitter/nvim-treesitter',
-    run = function()
-            local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
-            ts_update()
-    end,
-  }
-
+  use 'nvim-treesitter/nvim-treesitter'
+  use 'folke/which-key.nvim'
+  use 'natecraddock/workspaces.nvim'
+  use 'natecraddock/sessions.nvim'
+  
   -- IDE-oriented plugins
-  use 'sheerun/vim-polyglot'
   use {'kyazdani42/nvim-tree.lua', requires = 'kyazdani42/nvim-web-devicons'}
-  use {'nvim-lualine/lualine.nvim', requires = { 'nvim-tree/nvim-web-devicons', opt = true }}
+  use 'sheerun/vim-polyglot'
+
+  -- Telescope and its extensions 
+  use { "LinArcX/telescope-command-palette.nvim" }
   use {
-    'nvim-telescope/telescope.nvim', tag = '0.1.1',
+    'nvim-telescope/telescope.nvim',
+    tag = '0.1.1',
     requires = { {'nvim-lua/plenary.nvim'} }
   }  
-  use { "LinArcX/telescope-command-palette.nvim" }
 
   -- Aesthetics
   use { "catppuccin/nvim", as = "catppuccin" }
+  use {'nvim-lualine/lualine.nvim', requires = { 'nvim-tree/nvim-web-devicons', opt = true }}
 
   if packer_bootstrap then
     require('packer').sync()

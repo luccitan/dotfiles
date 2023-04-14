@@ -20,8 +20,6 @@ vim.opt.relativenumber = false
 vim.opt.cursorline = true
 vim.opt.cursorlineopt = 'line,number'
 
-
-vim.opt.termguicolors = true   -- 24-bit RGB color in the TUI
 vim.opt.undofile = true        -- persistent undo history
 vim.opt.showmode = true        -- DO show mode message on last line
 vim.opt.hidden = true          -- switch buffers without having to save changes
@@ -30,6 +28,8 @@ vim.opt.confirm = true         -- raise dialog asking to save changes when comma
 vim.opt.title = true           -- set terminal window title to something descriptive
 vim.opt.virtualedit = "block"  -- virtual editing in visual block mode
 vim.opt.shortmess:append("I")  -- don't give intro message when starting vim
+vim.opt.timeout = true
+vim.opt.timeoutlen = 300
 
 -- Variables
 --
