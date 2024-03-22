@@ -4,8 +4,9 @@
 .LSOverride
 
 # Specific files
-.config/nvim/undodir
-.config/nvim/plugin
+nvim/.config/nvim/undodir
+nvim/.config/nvim/plugin
+nvim/.config/nvim/lazy-lock.json
 
 # Swap files
 *.swp
