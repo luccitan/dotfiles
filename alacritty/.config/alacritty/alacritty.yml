@@ -1,0 +1,60 @@
+# Inspirations:
+# - https://github.com/solidiquis/dotfiles/blob/master/alacritty/alacritty.yml
+# - https://gist.github.com/sts10/df620672662fe4c6f03ac296a02b8e72
+
+import:
+  - ~/.config/alacritty/styling.yml
+  - ~/.config/alacritty/bindings.generic.yml
+  - ~/.config/alacritty/bindings.macos.yml
+
+dynamic_title: true
+live_config_reload: true
+w_bold_text_with_bright_colors: true
+
+shell:
+  program: /bin/zsh
+  args:
+    - -l
+    - -c
+    - "tmux -u new-session -A -s main"
+
+env:
+  TERM: "xterm-256color"
+
+scrolling:
+  history: 50000
+  multiplier: 3
+
+selection:
+  semantic_escape_chars: ",│`|:\"' ()[]{}<>"
+  save_to_clipboard: false # if true, save to clipboard what is selected
+
+cursor:
+  unfocused_hollow: true
+  style:
+    shape: Block
+
+mouse:
+  hide_when_typing: false
+  faux_scrollback_lines: 1
+  double_click: { threshold: 300 }
+  triple_click: { threshold: 300 }
+
+window:
+  option_as_alt: Both # macOS only
+  dynamic_title: true
+  dynamic_padding: false
+  opacity: 1.0
+
+  dimensions:
+    columns: 0
+    lines: 0
+  position:
+    x: 0
+    y: 0
+  padding:
+    x: 0
+    y: 0
+
+  decorations: full # border and title bar
+  startup_mode: Windowed

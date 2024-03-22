@@ -1,6 +1,7 @@
 # luccitan's dotfiles
 
-## Credits
+Dotfiles powered/organized with GNU Stow tool.
 
-### **For shells configuration**:
-    - https://blog.flowblok.id.au/2013-02/shell-startup-scripts.html
+## Credits/references
+
+- [GNU Stow quick tutorial/reference](https://venthur.de/2021-12-19-managing-dotfiles-with-stow.html)

@@ -1,0 +1,58 @@
+# Environments variables
+# ---------------------------
+
+# Fast and simple prompt
+PS1='%F{blue}%~ %(?.%F{green}.%F{red})%#%f '
+
+export XDG_CONFIG_HOME="$HOME/.config"
+export ZSH=$HOME/.zsh
+export ZSHRC="$HOME/.zshrc"
+
+export ENVS="$HOME/miniforge3/envs"
+export NVM_DIR=~/.nvm
+
+export PAGER=less
+export EDITOR=nvim
+export VISUAL=$EDITOR
+
+export LANG='en_US.UTF-8'
+export LC_ALL=$LANG
+export LC_COLLATE=$LANG
+export LC_CTYPE=$LANG
+export LC_MESSAGES=$LANG
+export LC_MONETARY=$LANG
+export LC_NUMERIC=$LANG
+export LC_TIME=$LANG
+
+export HISTFILE=$ZSH/.zsh_history
+export HISTSIZE=30000 # How many commands zsh will load to memory.
+export SAVEHIST=30000 # How many commands history will save on file.
+
+# Shell options
+# ---------------------------
+setopt HIST_IGNORE_ALL_DUPS # History won't save duplicates.
+setopt HIST_FIND_NO_DUPS # History won't show duplicates on search.
+
+umask 0022
+
+# bindkey "^[[1;5C" forward-word
+# bindkey "^[[1;5D" backward-word
+
+# Aliases
+# ---------------------------
+# 1. Defining shortcuts
+alias fullclear='clear && printf "\e[3J"'
+alias ipy="python3 -c 'import IPython; IPython.terminal.ipapp.launch_new_instance()'"
+
+# 2. Defining CLI default options
+alias ls='ls -lahG'
+alias rm='rm -i'
+
+# 3. Adding upgraded alternatives
+alias "cat++"='bat'
+alias "ping++"='gping'
+alias "ls++"='exa --long --tree --all --header --git --binary --level=1 --color=always'
+
+# OS Specifics
+alias brew='arch -arm64 /opt/homebrew/bin/brew'
+alias brew-x86='arch -x86_64 /usr/local/bin/brew'
