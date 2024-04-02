@@ -1,0 +1,119 @@
+[[keyboard.bindings]]
+action = "DecreaseFontSize"
+key = "Equals"
+mods = "Command"
+
+[[keyboard.bindings]]
+action = "IncreaseFontSize"
+key = "Slash"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0001c"
+key = "T"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0001d"
+key = "W"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0001n"
+key = "RBracket"
+mods = "Command|Shift"
+
+[[keyboard.bindings]]
+chars = "\u0001p"
+key = "LBracket"
+mods = "Command|Shift"
+
+[[keyboard.bindings]]
+chars = "\u001Bb"
+key = "Left"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "\u001Bf"
+key = "Right"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "\u00141"
+key = "Key1"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u00142"
+key = "Key2"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u00143"
+key = "Key3"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u00144"
+key = "Key4"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u00145"
+key = "Key5"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u00146"
+key = "Key6"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u00147"
+key = "Key7"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u00148"
+key = "Key8"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u00149"
+key = "Key9"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0014&"
+key = "W"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u001B[1;3A"
+key = "Up"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u001B[1;3B"
+key = "Down"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u001B[1;3D"
+key = "Left"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u001B[1;3C"
+key = "Right"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u001BB"
+key = "H"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "\u001BF"
+key = "L"
+mods = "Alt"
