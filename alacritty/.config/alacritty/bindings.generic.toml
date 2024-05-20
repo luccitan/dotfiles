@@ -1,44 +1,14 @@
-[[keyboard.bindings]]
-action = "ToggleFullscreen"
-key = "Return"
-mods = "Super"
+[keyboard]
+bindings = [
+    { key = "Return", mods = "Super", action = "ToggleFullScreen" },
+    { key = "N", mods = "Super", action = "SpawnNewInstance" },
 
-[[keyboard.bindings]]
-action = "SpawnNewInstance"
-key = "N"
-mods = "Super"
+    { key = "C", mods = "Super", action = "Copy" },
+    { key = "V", mods = "Super", action = "Paste" },
+    { key = "H", mods = "Super", action = "Hide" },
+    { key = "H", mods = "Super", action = "Quit" },
 
-[[keyboard.bindings]]
-action = "Paste"
-key = "V"
-mods = "Super"
-
-[[keyboard.bindings]]
-action = "Copy"
-key = "C"
-mods = "Super"
-
-[[keyboard.bindings]]
-action = "Hide"
-key = "H"
-mods = "Super"
-
-[[keyboard.bindings]]
-action = "Quit"
-key = "Q"
-mods = "Super"
-
-[[keyboard.bindings]]
-action = "ResetFontSize"
-key = "Key0"
-mods = "Super"
-
-[[keyboard.bindings]]
-action = "IncreaseFontSize"
-key = "Equals"
-mods = "Super|Shift"
-
-[[keyboard.bindings]]
-action = "DecreaseFontSize"
-key = "Minus"
-mods = "Super"
+    { key = "Key0", mods = "Super", action = "ResetFontSize" },
+    { key = "Equals", mods = "Super|Shift", action = "IncreaseFontSize" },
+    { key = "Minus", mods = "Super", action = "DecreaseFontSize" },
+]

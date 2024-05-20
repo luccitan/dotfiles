@@ -35,14 +35,17 @@ setopt HIST_FIND_NO_DUPS # History won't show duplicates on search.
 
 umask 0022
 
-# bindkey "^[[1;5C" forward-word
-# bindkey "^[[1;5D" backward-word
+bindkey -e
+bindkey '\e\e[C' forward-word # ⌥→
+bindkey '\e\e[D' backward-word # ⌥←
+bindkey '^R' history-incremental-search-backward
 
 # Aliases
 # ---------------------------
 # 1. Defining shortcuts
 alias fullclear='clear && printf "\e[3J"'
 alias ipy="python3 -c 'import IPython; IPython.terminal.ipapp.launch_new_instance()'"
+alias printpath="echo $PATH | sed 's/:/\n/g'"
 
 # 2. Defining CLI default options
 alias ls='ls -lahG'

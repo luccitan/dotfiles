@@ -1,119 +1,32 @@
-[[keyboard.bindings]]
-action = "DecreaseFontSize"
-key = "Equals"
-mods = "Command"
+[keyboard]
+bindings = [
+    { key = "Equals", mods = "Command", action = "DecreaseFontSize" },
+    { key = "Slash", mods = "Command", action = "IncreaseFontSize" },
+    { key = "T", mods = "Command", chars = "\u0001c" },
+    { key = "W", mods = "Command", chars = "\u0001d" },
 
-[[keyboard.bindings]]
-action = "IncreaseFontSize"
-key = "Slash"
-mods = "Command"
+    { key = "LBracket", mods = "Command|Shift", chars = "\u0001p" },
+    { key = "RBracket", mods = "Command|Shift", chars = "\u0001n" },
+    { key = "Left", mods = "Alt", chars = "\u001Bb" },
+    { key = "Right", mods = "Alt", chars = "\u001Bf" },
 
-[[keyboard.bindings]]
-chars = "\u0001c"
-key = "T"
-mods = "Command"
+    { key = "Key1", mods = "Command", chars = "\u00141" },
+    { key = "Key2", mods = "Command", chars = "\u00142" },
+    { key = "Key3", mods = "Command", chars = "\u00143" },
+    { key = "Key4", mods = "Command", chars = "\u00144" },
+    { key = "Key5", mods = "Command", chars = "\u00145" },
+    { key = "Key6", mods = "Command", chars = "\u00146" },
+    { key = "Key7", mods = "Command", chars = "\u00147" },
+    { key = "Key8", mods = "Command", chars = "\u00148" },
+    { key = "Key9", mods = "Command", chars = "\u00149" },
 
-[[keyboard.bindings]]
-chars = "\u0001d"
-key = "W"
-mods = "Command"
+    { key = "W", mods = "Command", chars = "\u0014&" },
 
-[[keyboard.bindings]]
-chars = "\u0001n"
-key = "RBracket"
-mods = "Command|Shift"
+    { key = "Up", mods = "Command", chars = "\u001B[1;3A" },
+    { key = "Down", mods = "Command", chars = "\u001B[1;3B" },
+    { key = "Left", mods = "Command", chars = "\u001B[1;3D" },
+    { key = "Right", mods = "Command", chars = "\u001B[1;3C" },
 
-[[keyboard.bindings]]
-chars = "\u0001p"
-key = "LBracket"
-mods = "Command|Shift"
-
-[[keyboard.bindings]]
-chars = "\u001Bb"
-key = "Left"
-mods = "Alt"
-
-[[keyboard.bindings]]
-chars = "\u001Bf"
-key = "Right"
-mods = "Alt"
-
-[[keyboard.bindings]]
-chars = "\u00141"
-key = "Key1"
-mods = "Command"
-
-[[keyboard.bindings]]
-chars = "\u00142"
-key = "Key2"
-mods = "Command"
-
-[[keyboard.bindings]]
-chars = "\u00143"
-key = "Key3"
-mods = "Command"
-
-[[keyboard.bindings]]
-chars = "\u00144"
-key = "Key4"
-mods = "Command"
-
-[[keyboard.bindings]]
-chars = "\u00145"
-key = "Key5"
-mods = "Command"
-
-[[keyboard.bindings]]
-chars = "\u00146"
-key = "Key6"
-mods = "Command"
-
-[[keyboard.bindings]]
-chars = "\u00147"
-key = "Key7"
-mods = "Command"
-
-[[keyboard.bindings]]
-chars = "\u00148"
-key = "Key8"
-mods = "Command"
-
-[[keyboard.bindings]]
-chars = "\u00149"
-key = "Key9"
-mods = "Command"
-
-[[keyboard.bindings]]
-chars = "\u0014&"
-key = "W"
-mods = "Command"
-
-[[keyboard.bindings]]
-chars = "\u001B[1;3A"
-key = "Up"
-mods = "Command"
-
-[[keyboard.bindings]]
-chars = "\u001B[1;3B"
-key = "Down"
-mods = "Command"
-
-[[keyboard.bindings]]
-chars = "\u001B[1;3D"
-key = "Left"
-mods = "Command"
-
-[[keyboard.bindings]]
-chars = "\u001B[1;3C"
-key = "Right"
-mods = "Command"
-
-[[keyboard.bindings]]
-chars = "\u001BB"
-key = "H"
-mods = "Alt"
-
-[[keyboard.bindings]]
-chars = "\u001BF"
-key = "L"
-mods = "Alt"
+    { key = "H", mods = "Alt", chars = "\u001BB" },
+    { key = "L", mods = "Alt", chars = "\u001BF" },
+]

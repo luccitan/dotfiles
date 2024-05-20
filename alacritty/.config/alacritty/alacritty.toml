@@ -1,46 +1,50 @@
-import = ["/Users/i350532/.config/alacritty/styling.toml", "/Users/i350532/.config/alacritty/bindings.generic.toml", "/Users/i350532/.config/alacritty/bindings.macos.toml"]
+import = [
+    "~/.config/alacritty/styling.toml",
+    "~/.config/alacritty/bindings.generic.toml",
+    "~/.config/alacritty/bindings.macos.toml"
+]
 live_config_reload = true
 
 [cursor]
-unfocused_hollow = true
+    unfocused_hollow = true
 
 [cursor.style]
-shape = "Block"
+    shape = "Block"
 
 [env]
-TERM = "xterm-256color"
+    TERM = "xterm-256color"
 
 [mouse]
-hide_when_typing = false
+    hide_when_typing = false
 
 [scrolling]
-history = 50000
-multiplier = 3
+    history = 50000
+    multiplier = 3
 
 [selection]
-save_to_clipboard = false
-semantic_escape_chars = ",│`|:\"' ()[]{}<>"
+    save_to_clipboard = false
+    semantic_escape_chars = ",│`|:\"' ()[]{}<>"
 
 [shell]
-args = ["-l", "-c", "tmux -u new-session -A -s main"]
-program = "/bin/zsh"
+    args = ["-l", "-c", "tmux -u new-session -A -s main"]
+    program = "/bin/zsh"
 
 [window]
-decorations = "full"
-dynamic_padding = false
-dynamic_title = true
-opacity = 1.0
-option_as_alt = "Both"
-startup_mode = "Windowed"
+    decorations = "full"
+    dynamic_padding = false
+    dynamic_title = true
+    opacity = 1.0
+    option_as_alt = "Both"
+    startup_mode = "Windowed"
 
-[window.dimensions]
-columns = 0
-lines = 0
+    [window.dimensions]
+        columns = 0
+        lines = 0
 
-[window.padding]
-x = 0
-y = 0
+    [window.padding]
+        x = 0
+        y = 0
 
-[window.position]
-x = 0
-y = 0
+    [window.position]
+        x = 0
+        y = 0

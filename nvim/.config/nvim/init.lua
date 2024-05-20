@@ -47,14 +47,14 @@ require('lazy').setup('plugins', {
 
 -- require 'plugins.lualine'
 
--- -- Navigation plugins
+-- Navigation plugins
 -- require 'plugins.nvim-tree'
 -- require 'plugins.telescope'
 -- require 'plugins.workspaces'
 -- require 'plugins.sessions'
 -- require 'plugins.barbar'
 
--- -- Other plugins
+-- Other plugins
 -- require 'plugins.which_key'
 
 -- -- Making an automatic packer compile when the packerinit file is updated
