@@ -55,7 +55,3 @@ alias rm='rm -i'
 alias "cat++"='bat'
 alias "ping++"='gping'
 alias "ls++"='exa --long --tree --all --header --git --binary --level=1 --color=always'
-
-# OS Specifics
-alias brew='arch -arm64 /opt/homebrew/bin/brew'
-alias brew-x86='arch -x86_64 /usr/local/bin/brew'
