@@ -54,4 +54,4 @@ alias rm='rm -i'
 # 3. Adding upgraded alternatives
 alias "cat++"='bat'
 alias "ping++"='gping'
-alias "ls++"='exa --long --tree --all --header --git --binary --level=1 --color=always'
+alias "ls++"='exa --long --tree --all --header --binary --level=1 --color=always'
