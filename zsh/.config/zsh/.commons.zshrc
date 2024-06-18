@@ -48,7 +48,7 @@ alias ipy="python3 -c 'import IPython; IPython.terminal.ipapp.launch_new_instanc
 alias printpath="echo $PATH | sed 's/:/\n/g'"
 
 # 2. Defining CLI default options
-alias ls='ls -lahG'
+alias ls='ls -lah --color=auto'
 alias rm='rm -i'
 
 # 3. Adding upgraded alternatives
