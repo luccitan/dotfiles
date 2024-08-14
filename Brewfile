@@ -8,7 +8,7 @@ brew "fzf"
 # CLI tools
 brew "git"
 brew "jq"
-brew "minio/stable/mc"
+brew "eza"
 brew "watch"
 brew "yarn"
 
@@ -19,11 +19,16 @@ brew "navi"
 # CLI replacements tools
 brew "bat"
 brew "duf"
-brew "exa"
 brew "gping"
 brew "htop"
 brew "procs"
 
+# Developers things
+brew "colima"
+brew "docker-compose"
+brew "docker-buildx"
+
 # Cask
+cask "vscodium"
 cask "alacritty"
-cask "docker"
+cask "font-hack-nerd-font"
