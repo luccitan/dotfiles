@@ -46,6 +46,7 @@ bindkey '^R' history-incremental-search-backward
 alias fullclear='clear && printf "\e[3J"'
 alias ipy="python3 -c 'import IPython; IPython.terminal.ipapp.launch_new_instance()'"
 alias printpath="echo $PATH | sed 's/:/\n/g'"
+alias isosudo='sudo -E env "PATH=$PATH"' 
 
 # 2. Defining CLI default options
 alias ls='ls -lah --color=auto'
