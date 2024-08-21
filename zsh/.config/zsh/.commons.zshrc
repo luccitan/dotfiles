@@ -5,10 +5,10 @@
 PS1='%F{blue}%~ %(?.%F{green}.%F{red})%#%f '
 
 export XDG_CONFIG_HOME="$HOME/.config"
-export ZSH=$HOME/.zsh
+export ZSH="$HOME/.zsh"
 export ZSHRC="$HOME/.zshrc"
 
-export ENVS="$HOME/miniforge3/envs"
+export ENVS="$HOME/mambaforge/envs"
 export NVM_DIR=~/.nvm
 
 export PAGER=less
@@ -44,7 +44,7 @@ bindkey '^R' history-incremental-search-backward
 # ---------------------------
 # 1. Defining shortcuts
 alias fullclear='clear && printf "\e[3J"'
-alias ipy="python3 -c 'import IPython; IPython.terminal.ipapp.launch_new_instance()'"
+alias ipy="python -c 'import IPython; IPython.terminal.ipapp.launch_new_instance()'"
 alias printpath="echo $PATH | sed 's/:/\n/g'"
 alias isosudo='sudo -E env "PATH=$PATH"' 
 

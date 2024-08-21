@@ -1,16 +1,22 @@
 # Terminal/shell customisation
 brew "tmux"
-brew "zsh"
+brew "font-hack-nerd-font"
 
 # Generic helpers
 brew "fzf"
 
-# CLI tools
+# generic CLI tools
 brew "git"
 brew "jq"
 brew "eza"
 brew "watch"
 brew "yarn"
+
+# Infra CLI tools
+brew "awscli"
+brew "kubectl"
+brew "helm"
+brew "derailed/k9s/k9s"
 
 # CLI helpers / documentation
 brew "tldr"
@@ -25,10 +31,9 @@ brew "procs"
 
 # Developers things
 brew "colima"
+brew "nvim"
 brew "docker-compose"
 brew "docker-buildx"
 
 # Cask
-cask "vscodium"
 cask "alacritty"
-cask "font-hack-nerd-font"
