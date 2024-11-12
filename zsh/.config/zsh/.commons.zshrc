@@ -47,6 +47,7 @@ alias fullclear='clear && printf "\e[3J"'
 alias ipy="python -c 'import IPython; IPython.terminal.ipapp.launch_new_instance()'"
 alias printpath="echo $PATH | sed 's/:/\n/g'"
 alias isosudo='sudo -E env "PATH=$PATH"' 
+alias k='kubectl'
 
 # 2. Defining CLI default options
 alias ls='ls -lah --color=auto'

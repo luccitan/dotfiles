@@ -11,3 +11,8 @@
 	amend = commit --amend -m
 	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
 	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+	remove-from-staging = reset HEAD --
+[init]
+	defaultBranch = main
+[commit]
+	gpgsign = false
