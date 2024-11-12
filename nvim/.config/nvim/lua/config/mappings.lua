@@ -4,7 +4,7 @@ local defaults = { noremap = true, silent = true }
 -- remap the key used to leave insert mode
 map('i', 'jj', '<esc>', defaults)
 
--- make reload of nvim config 
+-- make reload of nvim config
 map('n', '<Leader>rr', ':luafile $MYVIMRC', defaults)
 
 -- Toggle nvim-tree
@@ -21,13 +21,18 @@ vim.keymap.set('n', '<leader>ff', ':Telescope find_files<CR>', defaults)
 vim.keymap.set('n', '<leader>fg', ':Telescope live_grep<CR>', defaults)
 vim.keymap.set('n', '<leader>fb', ':Telescope buffers<CR>', defaults)
 vim.keymap.set('n', '<leader>fh', ':Telescope help_tags<CR>', default)
-vim.keymap.set('n', '<leader>fw', ':Telescope workspaces<CR>', defaults) 
+vim.keymap.set('n', '<leader>fw', ':Telescope workspaces<CR>', defaults)
+vim.keymap.set("n", "<space>fo", ":Telescope file_browser path=%:p:h select_buffer=true<CR>")
 
 -- Mappings for the vim splits, analogous to my tmux splits
 map('n', '<Leader>s<left>', ':leftabove vnew<CR>', defaults)
 map('n', '<Leader>s<right>', ':rightbelow vnew<CR>', defaults)
 map('n', '<Leader>s<up>', ':leftabove new<CR>', defaults)
 map('n', '<Leader>s<down>', ':rightbelow new<CR>', defaults)
+map('n', '<C-j>', '<C-w><up>', defaults)
+map('n', '<C-k>', '<C-w><down>', defaults)
+map('n', '<C-h>', '<C-w><left>', defaults)
+map('n', '<C-l>', '<C-w><right>', defaults)
 
 -- Move to previous/next
 map('n', '<Leader>tr', '<Cmd>BufferPrevious<CR>', defaults)
