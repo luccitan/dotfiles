@@ -15,4 +15,22 @@ return  {
         desc = "Buffer Local Keymaps (which-key)",
       },
     },
-  }
+    {
+      'akinsho/toggleterm.nvim',
+      version = "*",
+      opts = {
+        direction = 'float'
+      }
+    },
+    {
+      'atiladefreitas/dooing',
+      config = function()
+        require("dooing").setup({
+            -- your custom config here (optional)
+      })
+      end,
+      keys = {
+        { "<leader>td", desc = "Toggle Todo List" },
+      },
+    }
+}

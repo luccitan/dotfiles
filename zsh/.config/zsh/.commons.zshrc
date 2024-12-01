@@ -28,6 +28,15 @@ export HISTFILE=$ZSH/.zsh_history
 export HISTSIZE=30000 # How many commands zsh will load to memory.
 export SAVEHIST=30000 # How many commands history will save on file.
 
+# Custom functions
+# ---------------------------
+
+function generate_random_password() {
+    N_CHARS=${1:20}
+    tr -dc A-Za-z0-9 </dev/urandom | head -c $N_CHARS; echo 
+}
+
+
 # Shell options
 # ---------------------------
 setopt HIST_IGNORE_ALL_DUPS # History won't save duplicates.
