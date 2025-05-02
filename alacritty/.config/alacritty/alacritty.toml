@@ -1,9 +1,3 @@
-import = [
-    "~/.config/alacritty/styling.toml",
-    "~/.config/alacritty/bindings.generic.toml",
-    "~/.config/alacritty/bindings.macos.toml"
-]
-live_config_reload = true
 
 [cursor]
     unfocused_hollow = true
@@ -25,7 +19,7 @@ live_config_reload = true
     save_to_clipboard = false
     semantic_escape_chars = ",│`|:\"' ()[]{}<>"
 
-[shell]
+[terminal.shell]
     args = ["-l", "-c", "/opt/homebrew/bin/tmux -u new-session -D -A -s main"]
     program = "/bin/zsh"
 
@@ -48,3 +42,13 @@ live_config_reload = true
     [window.position]
         x = 0
         y = 0
+
+[general]
+live_config_reload = true
+import = [
+    "~/.config/alacritty/styling.toml",
+    "~/.config/alacritty/bindings.generic.toml",
+    "~/.config/alacritty/bindings.macos.toml"
+]
+
+[terminal]
