@@ -12,7 +12,7 @@ export ENVS="$HOME/mambaforge/envs"
 export NVM_DIR=~/.nvm
 
 export PAGER=less
-export EDITOR=nvim
+export EDITOR=vim
 export VISUAL=$EDITOR
 
 export LANG='en_US.UTF-8'
