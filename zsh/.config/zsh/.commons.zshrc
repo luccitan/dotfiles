@@ -8,7 +8,6 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export ZSH="$HOME/.zsh"
 export ZSHRC="$HOME/.zshrc"
 
-export ENVS="$HOME/mambaforge/envs"
 export NVM_DIR=~/.nvm
 
 export PAGER=less
@@ -57,6 +56,7 @@ alias ipy="python -c 'import IPython; IPython.terminal.ipapp.launch_new_instance
 alias printpath="echo $PATH | sed 's/:/\n/g'"
 alias isosudo='sudo -E env "PATH=$PATH"' 
 alias k='kubectl'
+alias kmd='just -g'
 
 # 2. Defining CLI default options
 alias ls='ls -lah --color=auto'

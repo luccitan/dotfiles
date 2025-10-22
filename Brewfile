@@ -11,6 +11,7 @@ brew "jq"
 brew "eza"
 brew "watch"
 brew "yarn"
+brew "just"
 
 # Infra CLI tools
 brew "awscli"
