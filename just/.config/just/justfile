@@ -1,0 +1,9 @@
+set allow-duplicate-recipes
+
+import? '~/.justfile'
+
+default:
+  just --list
+  
+venv-activate: 
+    

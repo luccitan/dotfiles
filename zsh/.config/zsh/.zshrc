@@ -1,14 +1,38 @@
-source $HOME/.config/zsh/.commons.zshrc
-source $HOME/.config/zsh/.plugins.zshrc
+# ...........................................................................
+# Core ZSHRC custon configuratiosn
+#   - loading specific configuration scripts, organized by topics
+#    - loading OS specific script
+# ...........................................................................
 
-OS_UNAME="$(uname -s)"
-case "${OS_UNAME}" in
+export ZSH="$HOME/.zsh"
+export ZSHRC="$HOME/.zshrc"
+
+# Enabling Homebrew links
+###################################################
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# Adding user custom zsh functions and loading them all
+fpath=( "$HOME/.config/zsh/functions" "${fpath[@]}" )
+autoload -Uz pathmod
+# autoload -Uz $fpath[1]/*(.:t)
+
+source "$HOME/.config/zsh/aliases.zshrc"
+source "$HOME/.config/zsh/envs.zshrc"
+source "$HOME/.config/zsh/opts.zshrc"
+source "$HOME/.config/zsh/plugins.zshrc"
+
+case "$(uname -s)" in
+    Darwin*)
+        source $HOME/.config/zsh/os.darwin.zshrc
+    ;;
 
     Linux*)
-        source $HOME/.config/zsh/.linux.zshrc
+        source $HOME/.config/zsh/os.linux.zshrc
     ;;
 
-    Darwin*)
-        source $HOME/.config/zsh/.darwin.zshrc
-    ;;
 esac
+
+# Enabling auto-completes
+autoload -Uz compinit
+compinit

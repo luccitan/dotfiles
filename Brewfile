@@ -1,12 +1,22 @@
+# ...........................................................................
+# Homebrew installation files for valuables tools
+# ...........................................................................
+
 # Terminal/shell customisation
+
+# ......... Terminal-related .........
 brew "tmux"
-brew "font-hack-nerd-font"
 
 # Generic helpers
 brew "fzf"
 
+# ......... Package management .........
+brew "pipx"
+brew "uv"
+brew "npm"
+brew "nvm"
+
 # generic CLI tools
-brew "git"
 brew "jq"
 brew "eza"
 brew "watch"
@@ -27,7 +37,7 @@ brew "navi"
 brew "bat"
 brew "duf"
 brew "gping"
-brew "htop"
+brew "btop"
 brew "procs"
 
 # Developers things

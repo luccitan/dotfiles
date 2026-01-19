@@ -1,0 +1,30 @@
+#autoload
+
+emulate -L zsh
+
+local cmd="$1"
+local p="$2"
+
+[[ -z $cmd || -z $p ]] && {
+  print "usage: pathmod {add|remove|prepend|append} PATH" >&2
+  return 1
+}
+
+# Path canonicalization
+p=${p:A}
+
+case "$cmd" in
+  add|prepend)
+    path=($p ${path:#$p})
+    ;;
+  append)
+    path=(${path:#$p} $p)
+    ;;
+  remove)
+    path=(${path:#$p})
+    ;;
+  *)
+    print "invalid command: $cmd" >&2
+    return 1
+    ;;
+esac
