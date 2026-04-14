@@ -10,12 +10,11 @@ export ZSHRC="$HOME/.zshrc"
 # Enabling Homebrew links
 ###################################################
 
-eval "$(/opt/homebrew/bin/brew shellenv)"
+if [[ $(which brew) ]]; then eval "$(/opt/homebrew/bin/brew shellenv)"; fi
 
 # Adding user custom zsh functions and loading them all
 fpath=( "$HOME/.config/zsh/functions" "${fpath[@]}" )
 autoload -Uz pathmod
-# autoload -Uz $fpath[1]/*(.:t)
 
 source "$HOME/.config/zsh/aliases.zshrc"
 source "$HOME/.config/zsh/envs.zshrc"
@@ -30,9 +29,18 @@ case "$(uname -s)" in
     Linux*)
         source $HOME/.config/zsh/os.linux.zshrc
     ;;
-
 esac
 
-# Enabling auto-completes
+# ......... Auto-completes enablement .........
+if command -v "docker" >/dev/null 2>&1; then
+    compfile="$HOME/.zsh/completions/_docker"
+    if [[ ! -f $compfile || $(command -v docker) -nt $compfile ]]; then
+        docker completion zsh > $compfile
+    fi
+fi
+
+typeset -U fpath
+fpath=("$HOME/.zsh/completions" $fpath)
+
 autoload -Uz compinit
 compinit

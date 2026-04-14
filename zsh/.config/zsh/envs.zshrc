@@ -17,15 +17,20 @@ export PAGER=less
 export EDITOR=vim
 export VISUAL=$EDITOR
 
-export LANG='en_US.UTF-8'
-export LC_ALL=$LANG
-export LC_COLLATE=$LANG
-export LC_CTYPE=$LANG
-export LC_MESSAGES=$LANG
-export LC_MONETARY=$LANG
-export LC_NUMERIC=$LANG
-export LC_TIME=$LANG
+# Locales
+export LANG="en_GB.UTF-8"
+export LANGUAGE="en_GB.UTF-8"
+export LC_COLLATE="fr_FR.UTF-8"
+export LC_CTYPE="fr_FR.UTF-8"
+export LC_MESSAGES="en_GB.UTF-8"
+export LC_MONETARY="fr_FR.UTF-8"
+export LC_NUMERIC="fr_FR.UTF-8"
+export LC_TIME="fr_FR.UTF-8"
 
 export HISTFILE=$ZSH/.zsh_history
 export HISTSIZE=30000 # How many commands zsh will load to memory.
 export SAVEHIST=30000 # How many commands history will save on file.
+
+# Disabling few auto-updates
+export TLDR_AUTO_UPDATE_DISABLED=1
+export HOMEBREW_NO_AUTO_UPDATE=1

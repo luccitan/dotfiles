@@ -11,9 +11,8 @@ brew "tmux"
 brew "fzf"
 
 # ......... Package management .........
-brew "pipx"
 brew "uv"
-brew "npm"
+brew "pnpm"
 brew "nvm"
 
 # generic CLI tools
