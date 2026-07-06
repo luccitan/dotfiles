@@ -41,10 +41,8 @@ esac
 
 # ......... Auto-completes enablement .........
 if command -v "docker" >/dev/null 2>&1; then
-    compfile="$HOME/.zsh/completions/_docker"
-    if [[ ! -f $compfile || $(command -v docker) -nt $compfile ]]; then
-        docker completion zsh > $compfile
-    fi
+    compdir="${fpath[1]}"  # zsh's first completion directory
+    docker completion zsh > "$compdir/_docker" 2>/dev/null
 fi
 
 declare -U fpath
