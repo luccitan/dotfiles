@@ -2,8 +2,6 @@
 # Homebrew installation files for valuables tools
 # ...........................................................................
 
-# Terminal/shell customisation
-
 # ......... Terminal-related .........
 brew "tmux"
 
@@ -17,16 +15,14 @@ brew "nvm"
 
 # generic CLI tools
 brew "jq"
+brew "yq"
 brew "eza"
 brew "watch"
-brew "yarn"
 brew "just"
 
 # Infra CLI tools
-brew "awscli"
 brew "kubectl"
 brew "helm"
-brew "derailed/k9s/k9s"
 
 # CLI helpers / documentation
 brew "tldr"
@@ -35,7 +31,6 @@ brew "navi"
 # CLI replacements tools
 brew "bat"
 brew "duf"
-brew "gping"
 brew "btop"
 brew "procs"
 
@@ -45,5 +40,8 @@ brew "nvim"
 brew "docker-compose"
 brew "docker-buildx"
 
-# Cask
+# ...........................................................................
+# Cask packages
+# ...........................................................................
+
 cask "alacritty"

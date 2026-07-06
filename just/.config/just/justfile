@@ -1,9 +1,14 @@
 set allow-duplicate-recipes
+set quiet := true
+set default-list := true
 
-import? '~/.justfile'
+# import? '~/.justfile'
 
-default:
-  just --list
-  
-venv-activate: 
-    
+format-kubeconfig config_file:
+  #!/usr/bin/env bash
+  yq -P '
+    pick(["apiVersion", "kind", "current-context", "contexts", "clusters", "users"]) |
+    .contexts |= sort_by(.name) |
+    .clusters |= sort_by(.name) |
+    .users |= sort_by(.name)
+  ' {{ config_file }}
