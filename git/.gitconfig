@@ -5,14 +5,68 @@
 [includeIf "gitdir:~/repositories/work/**"]
 	path = ~/repositories/work/.gitconfig
 
+[core]
+	editor = vim
+	excludesfile = ~/.gitignore_global
+	autocrlf = input
+	pager = less -FRX
+	fsmonitor = true          # perf: watch filesystem for changes (Git 2.37+)
+	untrackedCache = true     # perf: caches untracked file state
+
+# ......................................................................
+# ..... git commands customizations
+# ......................................................................
+
 [alias]
 	aliases = "! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /"
-	delete-local-merged = "!git branch --merged | egrep -v '(^\\*|master|main|dev)'| xargs -n 1 -r git branch -d"
+	c = commit
+	p = push
+	br = branch
+	co = checkout
 	amend = commit --amend -m
 	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
 	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
-	remove-from-staging = reset HEAD --
-[init]
-	defaultBranch = main
+	unstage = restore --staged
+	undo = reset --soft HEAD~1
+	graph = log --all --graph --oneline --decorate
+	fixup = "!f() { git commit --fixup=$1; }; f"
+	find = "!git log --oneline --all --grep"
+	contains = "!git branch -r --contains"   # which branches contain a commit
+	delete-local-merged = "!git branch --merged | egrep -v '(^\\*|master|main|dev)'| xargs -n 1 -r git branch -d"
+
+[branch]
+	sort = -committerdate      # `git branch` lists most recently active first
+
 [commit]
 	gpgsign = false
+
+[fetch]
+	prune = true               # auto-remove stale remote-tracking branches
+	pruneTags = true
+
+[init]
+	defaultBranch = main
+
+[push]
+	default = current          # push current branch to same-name upstream
+	autoSetupRemote = true     # auto-create upstream on first push (Git 2.37+)
+	followTags = true          # push annotated tags along with commits
+
+[tag]
+	sort = version:refname     # sane numeric tag sort (v2.10 after v2.9)
+
+# ......................................................................
+# ..... UI/UX customization
+# ......................................................................
+
+[color]
+	ui = auto
+
+[color "branch"]
+	current = yellow reverse
+
+[color "diff"]
+	meta = yellow
+	frag = magenta bold
+	old = red
+	new = green
