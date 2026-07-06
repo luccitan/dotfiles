@@ -3,7 +3,6 @@
 # ...........................................................................
 
 # 1. Defining shortcuts
-alias fullclear='clear && printf "\e[3J"'
 alias isosudo='sudo -E env "PATH=$PATH"'
 alias k='kubectl'
 alias tf='terraform'
@@ -14,6 +13,6 @@ alias ls='ls -lah --color=auto'
 alias rm='rm -i'
 
 # 3. Using upgraded alternatives
+alias "clear++"='clear && printf "\e[3J"'
 alias "cat++"='bat'
-alias "ping++"='gping'
 alias "ls++"='eza --long --tree --all --header --binary --level=1 --color=always'

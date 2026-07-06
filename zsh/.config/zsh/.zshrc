@@ -10,7 +10,7 @@ export ZSHRC="$HOME/.zshrc"
 # Enabling Homebrew links
 ###################################################
 
-if [[ $(which brew) ]]; then eval "$(/opt/homebrew/bin/brew shellenv)"; fi
+if [[ $(which brew) ]]; then eval "$(/usr/bin/env brew shellenv)"; fi
 
 # Adding user custom zsh functions and loading them all
 fpath=( "$HOME/.config/zsh/functions" "${fpath[@]}" )
@@ -23,11 +23,19 @@ source "$HOME/.config/zsh/plugins.zshrc"
 
 case "$(uname -s)" in
     Darwin*)
-        source $HOME/.config/zsh/os.darwin.zshrc
+        alias brew='arch -arm64 /usr/bin/env brew'
+        alias brew-x86='arch -x86_64 /usr/bin/env brew'
+
+        # Enable autocompletions through Homebrew zsh-autocompletions
+        if type brew &>/dev/null; then
+            FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+
+            autoload -Uz compinit
+            compinit
+        fi
     ;;
 
     Linux*)
-        source $HOME/.config/zsh/os.linux.zshrc
     ;;
 esac
 
@@ -39,8 +47,8 @@ if command -v "docker" >/dev/null 2>&1; then
     fi
 fi
 
-typeset -U fpath
+declare -U fpath
 fpath=("$HOME/.zsh/completions" $fpath)
 
-autoload -Uz compinit
-compinit
+# Autoload the ZSH completion system
+autoload -Uz compinit && compinit
