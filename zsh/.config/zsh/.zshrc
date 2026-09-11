@@ -1,54 +1,23 @@
-# ...........................................................................
-# Core ZSHRC custon configuratiosn
-#   - loading specific configuration scripts, organized by topics
-#    - loading OS specific script
-# ...........................................................................
+#
+# Core ZSH custom configuration
+#
+# For most sections, the config is split into dedicated local files
+# For remaining parts that do not deserve dedicated files, this is done below
+#
 
 export ZSH="$HOME/.zsh"
 export ZSHRC="$HOME/.zshrc"
 
-# Enabling Homebrew links
-###################################################
-
-if [[ $(which brew) ]]; then eval "$(/usr/bin/env brew shellenv)"; fi
-
-# Adding user custom zsh functions and loading them all
-fpath=( "$HOME/.config/zsh/functions" "${fpath[@]}" )
+# --- Custom ZSH functions ----------------------------------------------------
+fpath=( "$HOME/.config/zsh/functions" "${fpath[@]}" ) 
 autoload -Uz pathmod
 
+# --- Dedicated ZSH configuration scripts -------------------------------------
 source "$HOME/.config/zsh/aliases.zshrc"
 source "$HOME/.config/zsh/envs.zshrc"
 source "$HOME/.config/zsh/opts.zshrc"
 source "$HOME/.config/zsh/plugins.zshrc"
+source "$HOME/.config/zsh/autocompletions.zshrc"
 
-case "$(uname -s)" in
-    Darwin*)
-        alias brew='arch -arm64 /usr/bin/env brew'
-        alias brew-x86='arch -x86_64 /usr/bin/env brew'
-
-        # Enable autocompletions through Homebrew zsh-autocompletions
-        if type brew &>/dev/null; then
-            FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
-
-            autoload -Uz compinit
-            compinit
-        fi
-    ;;
-
-    Linux*)
-    ;;
-esac
-
-# ......... Auto-completes enablement .........
-if command -v "docker" >/dev/null 2>&1; then
-    compfile="$HOME/.zsh/completions/_docker"
-    if [[ ! -f $compfile || $(command -v docker) -nt $compfile ]]; then
-        docker completion zsh > $compfile
-    fi
-fi
-
-declare -U fpath
-fpath=("$HOME/.zsh/completions" $fpath)
-
-# Autoload the ZSH completion system
-autoload -Uz compinit && compinit
+# Additional completions settings
+compdef kubecolor=kubectl
