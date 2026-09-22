@@ -9,8 +9,11 @@ export ZSH="$HOME/.zsh"
 export ZSHRC="$HOME/.zshrc"
 
 # --- Custom ZSH functions ----------------------------------------------------
-fpath=( "$HOME/.config/zsh/functions" "${fpath[@]}" ) 
+fpath=( "$HOME/.config/zsh/functions" "${fpath[@]}" )
 autoload -Uz pathmod
+
+# --- Common PATH extension ---------------------------------------------------
+pathmod add "/opt/homebrew/bin"
 
 # --- Dedicated ZSH configuration scripts -------------------------------------
 source "$HOME/.config/zsh/aliases.zshrc"
@@ -18,6 +21,3 @@ source "$HOME/.config/zsh/envs.zshrc"
 source "$HOME/.config/zsh/opts.zshrc"
 source "$HOME/.config/zsh/plugins.zshrc"
 source "$HOME/.config/zsh/autocompletions.zshrc"
-
-# Additional completions settings
-compdef kubecolor=kubectl

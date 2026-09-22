@@ -13,7 +13,7 @@
 # Add before compinit so these take precedence
 ZSH_COMPLETIONS_DIR="${XDG_CONFIG_HOME}/zsh/completions"
 mkdir -p "$ZSH_COMPLETIONS_DIR"
-fpath=( "$ZSH_COMPLETIONS_DIR" "${fpath[@]}" ) 
+fpath=( "$ZSH_COMPLETIONS_DIR" "${fpath[@]}" )
 
 # --- Homebrew completions ----------------------------------------------------
 if type brew &>/dev/null; then
@@ -23,6 +23,7 @@ fi
 # --- Init --------------------------------------------------------------------
 autoload -Uz compinit
 compinit
+compdef kubecolor=kubectl # kubecolor autocompletions are the same as kubectl ones
 
 # --- FZF key bindings + completion -------------------------------------------
 # Ctrl+T: file picker, Ctrl+R: history search, Alt+C: cd into dir
