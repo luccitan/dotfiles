@@ -2,8 +2,8 @@
 	name = Tanguy LUCCI
 	email = tanguylucci@protonmail.com
 
-[includeIf "gitdir:~/repositories/work/**"]
-	path = ~/repositories/work/.gitconfig
+[include]
+	path = ~/.gitconfig.local
 
 [core]
 	editor = vim
@@ -13,9 +13,7 @@
 	fsmonitor = true          # perf: watch filesystem for changes (Git 2.37+)
 	untrackedCache = true     # perf: caches untracked file state
 
-# ......................................................................
-# ..... git commands customizations
-# ......................................................................
+# --- git commands customizations
 
 [alias]
 	aliases = "! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /"
@@ -55,9 +53,7 @@
 [tag]
 	sort = version:refname     # sane numeric tag sort (v2.10 after v2.9)
 
-# ......................................................................
-# ..... UI/UX customization
-# ......................................................................
+# --- UI/UX customization
 
 [color]
 	ui = auto
