@@ -22,4 +22,4 @@ alias rm='rm -i'
 # 3. Using upgraded alternatives
 alias "clear++"='clear && printf "\e[3J"'
 alias "cat++"='bat'
-alias "ls++"='eza --long --tree --all --header --binary --level=1 --color=always'
+alias "ls++"='eza --long --tree --group --all --header --binary --level=1 --color=always --icons=auto'
