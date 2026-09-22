@@ -1,0 +1,400 @@
+#
+# Ghostty configuration
+#
+# Uncomment and modify to override defaults.
+# Config reloads on save (no restart needed for most options).
+#
+
+
+# --- Font --------------------------------------------------------------------
+
+# Font families for each style variant — any installed font name (ghostty +list-fonts)
+font-family = Hack Nerd Font
+# font-family-bold =
+# font-family-italic =
+# font-family-bold-italic =
+
+# Named style selection per variant — style name e.g. "Heavy", false = disable
+# font-style =
+# font-style-bold =
+# font-style-italic =
+# font-style-bold-italic =
+
+# Font size — points, decimals supported
+font-size = 11
+
+# Variable font axis values per style variant — e.g. wght=700
+# font-variation =
+# font-variation-bold =
+# font-variation-italic =
+# font-variation-bold-italic =
+
+# OpenType feature flags — e.g. "liga" to enable, "-calt" to disable
+# font-feature =
+
+# Map Unicode codepoint ranges to specific fonts — U+ABCD=fontname or U+ABCD-U+EFGH=fontname
+# font-codepoint-map =
+
+# Synthesize bold/italic if the font lacks those variants — true | false | no-bold | no-italic | no-bold-italic
+# font-synthetic-style = true
+
+# Thicker font strokes (macOS only) — true | false; strength 0–255
+# font-thicken = false
+# font-thicken-strength = 0
+
+# Where text shaping runs break — cursor | no-cursor
+# font-shaping-break = cursor
+
+
+# --- Cursor ------------------------------------------------------------------
+
+# Cursor shape and blink — block | bar | underline | block_hollow; true | false
+# cursor-style = block
+# cursor-style-blink = true
+
+# Cursor color, text color, and opacity — hex without #; 0.0–1.0
+# cursor-color =
+# cursor-text =
+# cursor-opacity = 1.0
+
+# Invert fg/bg for cursor instead of using cursor-color — true | false
+# cursor-invert-fg-bg = false
+
+# Click to move cursor at shell prompts (requires shell integration) — true | false
+# cursor-click-to-move =
+
+
+# --- Colors / theme ----------------------------------------------------------
+
+# Color theme — built-in name, path, or light:name,dark:name (ghostty +list-themes)
+theme = Catppuccin Frappe
+
+# Base terminal colors — hex without #
+background = 152528
+foreground = e6eaea
+
+# Background image — path to PNG/JPEG; opacity multiplier; position; fit; repeat
+# background-image =
+# background-image-opacity = 1.0
+# background-image-position = center
+# background-image-fit = contain
+# background-image-repeat = false
+
+# Background transparency, per-cell opacity, and blur — 0.0–1.0; true | false; true | false | integer | macos-glass-regular | macos-glass-clear
+# background-opacity = 1.0
+# background-opacity-cells = false
+# background-blur = false
+
+# Customize the 256-color palette — N=COLOR (0–255); auto-generate from base 16 colors
+# palette = 0=
+# palette-generate = false
+# palette-harmonious = false
+
+# Selection highlight colors — hex, X11 name, cell-foreground, cell-background
+selection-foreground = e6eaea
+selection-background = 293e40
+
+# Clear selection on typing or copying — true | false
+# selection-clear-on-typing = true
+# selection-clear-on-copy = false
+
+# Characters treated as word boundaries in double-click selection
+selection-word-chars = ,│`|:"' ()[]{}<>
+
+# Minimum contrast ratio for text (WCAG 2.0) — 1–21
+# minimum-contrast = 1.0
+
+# Render bold text using bright color variants — true | false
+# bold-is-bright = false
+
+# Color space for alpha blending — native | linear | linear-corrected
+# alpha-blending = native
+
+# Search match colors (unfocused and focused) — hex or X11 name
+search-foreground = e6eaea
+search-background = 425e5e
+search-selected-foreground = e6eaea
+search-selected-background = 7aa4a1
+
+# Split pane divider color — hex or X11 name
+# split-divider-color =
+
+# Unfocused split pane dimming — opacity 0.15–1.0; fill color hex or X11 name
+# unfocused-split-opacity = 0.9
+# unfocused-split-fill =
+
+# Preserve zoom state when navigating splits — navigation | no-navigation
+# split-preserve-zoom =
+
+
+# --- Window ------------------------------------------------------------------
+
+# Initial window size in grid cells — requires both; minimum 10×4
+# window-width = 0
+# window-height = 0
+
+# Initial window position in pixels (macOS) — requires both; origin = top-left of visible area
+# window-position-x =
+# window-position-y =
+
+# Padding between content and window edges — points; format: N or left,right / top,bottom
+# window-padding-x = 0
+# window-padding-y = 0
+# window-padding-balance = false
+# window-padding-color = background
+
+# Title bar and borders — none | auto | client | server
+# window-decoration = auto
+
+# Font used for window and tab titles
+# window-title-font-family =
+
+# Window chrome theme — auto | system | light | dark
+# window-theme = auto
+
+# Persist window layout between sessions (macOS) — default | never | always
+# window-save-state = default
+
+# Resize in cell increments instead of pixels (macOS) — true | false
+# window-step-resize = false
+
+# Sync rendering to display refresh rate (macOS) — true | false
+# window-vsync = true
+
+# Where new tabs are inserted — current | end
+# window-new-tab-position = current
+
+# Color space for terminal rendering (macOS) — srgb | display-p3
+# window-colorspace = srgb
+
+# Inherit properties from the previous window, tab, or split — true | false
+# window-inherit-working-directory = false
+# tab-inherit-working-directory = false
+# split-inherit-working-directory = false
+# window-inherit-font-size = false
+
+# Start maximized or fullscreen — true | false; fullscreen also: non-native | non-native-visible-menu | non-native-padded-notch
+# maximize = false
+# fullscreen = false
+
+# Focus split pane on mouse hover — true | false
+# focus-follows-mouse = false
+
+# Show size overlay during resize — never | always | after-first; position; duration e.g. 750ms
+# resize-overlay = after-first
+# resize-overlay-position = center
+# resize-overlay-duration = 750ms
+
+
+# --- Shell integration -------------------------------------------------------
+
+# Shell integration mode — detect | bash | zsh | fish | none
+# shell-integration = detect
+
+# Enabled features — comma-separated: cursor, sudo, title
+# shell-integration-features = cursor,sudo,title
+
+
+# --- Terminal ----------------------------------------------------------------
+
+# Command to run — path, direct:cmd (no shell), or shell:cmd; command = all surfaces, initial-command = first only
+command = shell:tmux -u new-session -D -A -s main
+# initial-command = 
+
+# Initial working directory — absolute path, ~/path, home, inherit
+# working-directory = inherit
+
+# Extra environment variables — KEY=VALUE (repeatable)
+# env =
+
+# Data to send on startup — raw:text or path:/file (10MB limit)
+# input =
+
+# Keep terminal open after command exits — true | false
+# wait-after-command = false
+
+# Milliseconds below which an exit is treated as abnormal
+# abnormal-command-exit-runtime =
+
+# Allow programs to query the window title (CSI 21 t) — true | false
+# title-report = true
+
+# Unicode width calculation method — legacy | unicode
+# grapheme-width-method = unicode
+
+
+# --- Scrollback --------------------------------------------------------------
+
+# Max scrollback buffer size per surface — bytes
+scrollback-limit = 10000000
+
+# Scrollbar visibility — system | never
+# scrollbar = system
+
+# What triggers a scroll to bottom — keystroke | no-output | output | no-keystroke (comma-separated)
+# scroll-to-bottom = keystroke,no-output
+
+
+# --- Mouse -------------------------------------------------------------------
+
+# Scroll speed multiplier — number; or precision:N,discrete:N
+mouse-scroll-multiplier = 3
+
+# Hide mouse cursor while typing — true | false
+# mouse-hide-while-typing = false
+
+# Allow programs to capture mouse events — true | false
+# mouse-reporting = true
+
+# Report Shift+click to programs — true | false | always | never
+# mouse-shift-capture = false
+
+# Auto-copy selection — clipboard | primary | false
+copy-on-select = false
+
+
+# --- Clipboard ---------------------------------------------------------------
+
+# OSC 52 clipboard read and write permissions — ask | allow | deny
+# clipboard-read = ask
+# clipboard-write = allow
+
+# Strip trailing spaces when copying — true | false
+# clipboard-trim-trailing-spaces = false
+
+# Paste safety — warn on unsafe paste; trust bracketed pastes — true | false
+# clipboard-paste-protection = true
+# clipboard-paste-bracketed-safe = true
+
+
+# --- Notifications -----------------------------------------------------------
+
+# Notify on command finish (requires shell integration) — never | unfocused | always; bell | notify; minimum duration e.g. 5s
+# notify-on-command-finish = never
+# notify-on-command-finish-action = bell
+# notify-on-command-finish-after = 5s
+
+
+# --- Links -------------------------------------------------------------------
+
+# Auto-detect and highlight URLs, Cmd+click to open — true | false
+# link-url = true
+
+# Show URL preview on hover — true | false | osc8 (OSC 8 links only)
+# link-previews = true
+
+
+# --- Cell adjustments --------------------------------------------------------
+
+# Modify cell size — pixels or percentage e.g. 1, -1, 20%, -15%
+# adjust-cell-width = 0
+# adjust-cell-height = 0
+
+# Shift font baseline up/down — pixels or percentage (positive = up)
+# adjust-font-baseline = 0
+
+# Underline, strikethrough, and overline positions and thicknesses — pixels or percentage
+# adjust-underline-position = 0
+# adjust-underline-thickness = 0
+# adjust-strikethrough-position = 0
+# adjust-strikethrough-thickness = 0
+# adjust-overline-position = 0
+# adjust-overline-thickness = 0
+
+# Cursor dimensions — pixels or percentage
+# adjust-cursor-thickness = 0
+# adjust-cursor-height = 0
+
+# Box-drawing character thickness — pixels or percentage
+# adjust-box-thickness = 0
+
+# Nerd font icon maximum height — pixels or percentage
+# adjust-icon-height = 0
+
+
+# --- Keybindings -------------------------------------------------------------
+# Format: keybind = [global:|all:|unconsumed:|performable:]<mods>+<key>=<action>
+# Sequences: ctrl+a>n=action — ghostty +list-actions for available actions
+
+# Remap modifier keys — from=to e.g. ctrl=super
+# key-remap =
+
+# Window management
+keybind = super+enter=toggle_fullscreen
+keybind = super+n=new_window
+keybind = super+c=copy_to_clipboard
+keybind = super+v=paste_from_clipboard
+
+# tmux: windows — text:\u{14} sends Ctrl-T (tmux prefix), then key triggers built-in prefix binding
+# NOTE: use \u{14} not \x14 — Ghostty's \x escape is greedy and would swallow a following hex digit (0-9,a-f)
+keybind = super+t=text:\u{14}c
+keybind = super+w=text:\u{14}&
+keybind = super+shift+left_bracket=text:\u{14}p
+keybind = super+shift+right_bracket=text:\u{14}n
+
+# tmux: select window by index
+# NOTE: must use physical:<key> — Ghostty binds goto_tab to the PHYSICAL digit key,
+# and a physical binding beats a translated one, so plain super+1 would be shadowed.
+keybind = super+physical:one=text:\u{14}1
+keybind = super+physical:two=text:\u{14}2
+keybind = super+physical:three=text:\u{14}3
+keybind = super+physical:four=text:\u{14}4
+keybind = super+physical:five=text:\u{14}5
+keybind = super+physical:six=text:\u{14}6
+keybind = super+physical:seven=text:\u{14}7
+keybind = super+physical:eight=text:\u{14}8
+keybind = super+physical:nine=text:\u{14}9
+
+# tmux: pane navigation via alt+arrow sequences
+keybind = super+up=text:\x1b[1;3A
+keybind = super+down=text:\x1b[1;3B
+keybind = super+left=text:\x1b[1;3D
+keybind = super+right=text:\x1b[1;3C
+
+# Word navigation
+keybind = alt+left=text:\u{1b}b
+keybind = alt+right=text:\u{1b}f
+keybind = alt+h=text:\u{1b}B
+keybind = alt+l=text:\u{1b}F
+
+
+# --- Quick terminal (drop-down) ----------------------------------------------
+
+# Screen position — top | bottom | left | right | center
+# quick-terminal-position = top
+
+# Which screen to use — main | cursor | mouse
+# quick-terminal-screen = main
+
+# Slide animation duration — seconds
+# quick-terminal-animation-duration = 0.2
+
+# Hide when focus is lost — true | false
+# quick-terminal-autohide = true
+
+# Global hotkey to toggle the quick terminal
+keybind = global:ctrl+grave_accent=toggle_quick_terminal
+
+
+# --- macOS -------------------------------------------------------------------
+
+# Title bar style — transparent | native | hidden | tabs
+# macos-titlebar-style = transparent
+
+# Proxy icon in title bar — visible | hidden
+# macos-titlebar-proxy-icon = visible
+
+# Use Option key as Alt — false | left | right | true
+macos-option-as-alt = true
+
+# Show window shadow — true | false
+# macos-window-shadow = true
+
+
+# --- Updates -----------------------------------------------------------------
+
+# Auto-update behavior — off | check | download
+# auto-update = check
+
+# Update channel — stable | tip
+# auto-update-channel = stable
