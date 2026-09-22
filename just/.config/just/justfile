@@ -1,9 +1,28 @@
+#
+# Global Justfile - customization options and global commands
+#
+#  This file is loaded by Just as the global config (~/.config/just/justfile).
+#  It contains settings that apply to all justfiles + global recipes not tied to any specific project.
+#
+#
+
+# --- Settings ----------------------------------------------------------------
+
+# Allow recipes with the same name across imported files without erroring
 set allow-duplicate-recipes
+# set allow-duplicate-variables  # default: false - same but for variables
+
+# Suppress "Running recipe..." echo before each recipe line
 set quiet := true
+
+# Run `just` with no arguments to list all recipes (instead of erroring)
 set default-list := true
+# set list-heading := "Available recipes:\n"  # default: "Available recipes:\n"
+# set list-prefix := "  "                     # default: "  " - indentation in recipe list
 
-# import? '~/.justfile'
+# --- Global recipes ----------------------------------------------------------
 
+# Pretty-print and sort a kubeconfig file
 format-kubeconfig config_file:
   #!/usr/bin/env bash
   yq -P '

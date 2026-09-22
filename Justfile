@@ -1,3 +1,5 @@
+set default-list := true
+
 ZSH_COMPLETIONS_DIR := env("XDG_CONFIG_HOME", env("HOME") + "/.config") + "/zsh/completions"
 
 stow-all:

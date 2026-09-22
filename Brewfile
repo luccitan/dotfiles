@@ -1,7 +1,7 @@
 # ...........................................................................
 # Homebrew installation files for valuables tools
 # ...........................................................................
-
+# 
 # Centralized personal Brewfile
 #
 #   It contains recipes that do not necesserily match for all setups
