@@ -24,6 +24,7 @@ fi
 autoload -Uz compinit
 compinit
 compdef kubecolor=kubectl # kubecolor autocompletions are the same as kubectl ones
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}' # autocompletion matching now case insensitive
 
 # --- FZF key bindings + completion -------------------------------------------
 # Ctrl+T: file picker, Ctrl+R: history search, Alt+C: cd into dir

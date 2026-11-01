@@ -198,7 +198,7 @@ search-selected-background = 7aa4a1
 # --- Terminal ----------------------------------------------------------------
 
 # Command to run — path, direct:cmd (no shell), or shell:cmd; command = all surfaces, initial-command = first only
-command = shell:tmux -u new-session -D -A -s main
+command = shell:/opt/homebrew/bin/tmux -u new-session -D -A -s main
 # initial-command = 
 
 # Initial working directory — absolute path, ~/path, home, inherit
