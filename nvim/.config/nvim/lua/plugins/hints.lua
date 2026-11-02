@@ -20,6 +20,8 @@ return {
         B            = { text = "B", prio = 6 },  -- Previous WORD start
         E            = { text = "E", prio = 5 },  -- Next WORD end
       },
+      
+      targetedMotionHints = { enabled = false },
 
       -- Gutter hints on the left side for vertical navigation
       gutterHints = {
@@ -38,7 +40,10 @@ return {
         vim.api.nvim_set_hl(0, "PrecognitionHighlight", { fg = comment_fg, bg = "NONE" })
       end
       set_hl()
-      vim.api.nvim_create_autocmd("ColorScheme", { callback = set_hl })
+      vim.api.nvim_create_autocmd("ColorScheme", {
+        group = vim.api.nvim_create_augroup("MotionHintColors", { clear = true }),
+        callback = set_hl,
+      })
 
       vim.keymap.set("n", "<Leader>th", function()
         require("precognition").toggle()

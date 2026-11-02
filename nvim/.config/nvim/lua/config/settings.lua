@@ -14,10 +14,10 @@ vim.opt.breakindent = true        -- Indent wrapped lines to match original
 
 -- ─── Lines & columns ──────────────────────────────────────────────────────────
 vim.opt.number         = true         -- Absolute line numbers
-vim.opt.relativenumber = true         -- Relative numbers (easy jump distances)
+vim.opt.relativenumber = false        -- No relative numbers
 vim.opt.cursorline     = true         -- Highlight the current line
 vim.opt.cursorlineopt  = "line,number"
-vim.opt.textwidth      = 99           -- Hard-wrap at 99 chars (prose only)
+vim.opt.textwidth      = 99           -- Hard-wrap inserted text when formatoptions permits
 vim.opt.colorcolumn    = { 100, 120 } -- Visual ruler columns
 vim.opt.scrolloff      = 8            -- Keep 8 lines visible above/below cursor
 vim.opt.sidescrolloff  = 8            -- Keep 8 columns visible left/right
@@ -27,15 +27,14 @@ vim.opt.whichwrap:append("<,>,[,],h,l") -- Allow h/l and arrow keys to cross lin
 
 
 -- ─── Completion ───────────────────────────────────────────────────────────────
-vim.opt.completeopt = { "menuone", "noinsert", "popup" } -- popup shows a docs side-pane (0.12+)
+vim.opt.completeopt = { "menuone", "noinsert", "noselect", "popup" }
 vim.opt.pumheight   = 10                                 -- Max items shown in the completion menu
 
 
 -- ─── Folding ──────────────────────────────────────────────────────────────────
 vim.opt.foldenable    = true      -- Enable folding
 vim.opt.foldlevelstart = 99       -- All folds open when a file is opened
-vim.opt.foldmethod    = "expr"    -- Fold boundaries defined by an expression
-vim.opt.foldexpr      = "v:lua.vim.treesitter.foldexpr()" -- Built-in treesitter folds (no plugin needed)
+vim.opt.foldmethod    = "manual"  -- Treesitter enables expression folds when a parser exists
 
 
 -- ─── Files & persistence ──────────────────────────────────────────────────────
@@ -52,6 +51,8 @@ vim.opt.termguicolors = true      -- 24-bit color support
 vim.opt.showmode      = false     -- Mode is shown by the statusline instead
 vim.opt.signcolumn    = "yes"     -- Always-visible sign column (no layout shifts on diagnostics)
 vim.opt.laststatus    = 3         -- Single global statusline (not one per split)
+vim.opt.winborder     = "rounded"
+vim.opt.sessionoptions = { "blank", "buffers", "curdir", "folds", "help", "tabpages", "winsize", "winpos", "terminal", "localoptions" }
 vim.opt.list          = true      -- Visualize invisible characters
 vim.opt.listchars     = { tab = "» ", trail = "·", nbsp = "␣" }
 vim.opt.conceallevel  = 0         -- Never hide characters (e.g. markdown quote characters)
@@ -79,16 +80,6 @@ vim.opt.wildoptions = "pum"               -- Show completion candidates in a pop
 
 
 -- ─── Disable unused built-in plugins ─────────────────────────────────────────
--- These legacy Vim plugins are never needed in a modern Neovim setup.
+-- No directory browser; fzf-lua handles file selection.
 vim.g.loaded_netrw       = 1
 vim.g.loaded_netrwPlugin = 1
-
-for _, p in ipairs({
-  "netrwSettings", "netrwFileHandlers",
-  "gzip", "zip", "zipPlugin", "tar", "tarPlugin",
-  "getscript", "getscriptPlugin",
-  "vimball", "vimballPlugin",
-  "2html_plugin", "logipat", "rrhelper", "spellfile_plugin",
-}) do
-  vim.g["loaded_" .. p] = 1
-end

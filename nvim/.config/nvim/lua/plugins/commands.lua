@@ -4,12 +4,6 @@ return {
     event = "VeryLazy",
 
     opts = {
-      plugins = {
-        marks     = true,  -- Show mark list on ' and `
-        registers = true,  -- Show register contents on " and @
-        spelling  = { enabled = true, suggestions = 20 }, -- Suggest spellings on z=
-      },
-
       spec = {
         -- Group labels make the popup show context instead of raw key letters
         { "<leader>f", group = "find" },
@@ -28,8 +22,6 @@ return {
           desc = "buffer keymaps",
         },
       },
-
-      triggers = { "auto" }, -- Show popup automatically after any key prefix
 
       win = {
         border  = "rounded",

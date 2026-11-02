@@ -6,7 +6,7 @@ return {
 
     opts = {
       options = {
-        theme                = "tokyonight", -- Match the active colorscheme
+        theme                = "vscode", -- Match the active colorscheme
         globalstatus         = true,         -- Single statusline across all splits
         section_separators   = "",
         component_separators = "",

@@ -16,8 +16,8 @@ map("n", "<C-s>",      ":w<CR>",                opts("save file"))
 map("i", "<C-s>",      "<Esc>:w<CR>",           opts("save file"))
 
 -- Navigate wrapped lines visually (j/k move by screen line, not logical line)
-map("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
-map("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
+map("n", "j", "v:count == 0 ? 'gj' : 'j'", opts("next display line", { expr = true }))
+map("n", "k", "v:count == 0 ? 'gk' : 'k'", opts("previous display line", { expr = true }))
 
 
 -- ─── Clipboard ────────────────────────────────────────────────────────────────
@@ -53,7 +53,6 @@ map("n", "<C-l>", "<C-w>l", opts("move to right split"))
 
 
 -- ─── Find (fzf-lua) ───────────────────────────────────────────────────────────
--- <C-e> repurposed from NvimTreeToggle (was broken — no file tree installed)
 map("n", "<C-e>",      "<Cmd>FzfLua files<CR>",               opts("find files"))
 map("n", "<Leader>e",  "<Cmd>FzfLua files<CR>",               opts("find files"))
 map("n", "<Leader>ff", "<Cmd>FzfLua files<CR>",               opts("find files"))
@@ -67,31 +66,17 @@ map("n", "<Leader>fd", "<Cmd>FzfLua diagnostics_workspace<CR>", opts("workspace 
 map("n", "<Leader>:",  "<Cmd>FzfLua commands<CR>",  opts("command palette"))
 map("n", "<Leader>fh", "<Cmd>FzfLua help_tags<CR>", opts("search help"))
 map("n", "<Leader>fk", "<Cmd>FzfLua keymaps<CR>",   opts("search keymaps"))
--- <leader>fp is defined in plugins/projects.lua (requires project.nvim)
+-- Project selection lives with its plugin in plugins/projects.lua.
 
 
 -- ─── LSP ──────────────────────────────────────────────────────────────────────
--- F-key variants mirror VS Code; <leader>l* variants are discoverable via which-key
-map("n", "K",          vim.lsp.buf.hover,           opts("hover docs"))
-map("n", "gd",         vim.lsp.buf.definition,      opts("go to definition"))
-map("n", "gr",         vim.lsp.buf.references,      opts("find references"))
-map("n", "gi",         vim.lsp.buf.implementation,  opts("go to implementation"))
-
-map("n", "<F12>",     vim.lsp.buf.definition,       opts("go to definition"))
-map("n", "<C-F12>",   vim.lsp.buf.references,       opts("find references"))
-map("n", "<F2>",      vim.lsp.buf.rename,           opts("rename symbol"))
-map("n", "<C-Space>", vim.lsp.buf.code_action,      opts("code actions"))
-
-map("n", "<Leader>ld", vim.lsp.buf.definition,      opts("go to definition"))
-map("n", "<Leader>lr", vim.lsp.buf.references,      opts("find references"))
-map("n", "<Leader>ln", vim.lsp.buf.rename,          opts("rename symbol"))
-map("n", "<Leader>la", vim.lsp.buf.code_action,     opts("code actions"))
-map("n", "<Leader>lf", function() vim.lsp.buf.format({ async = false }) end, opts("format buffer"))
-map("n", "<Leader>li", "<Cmd>LspInfo<CR>",          opts("LSP info"))
+-- LSP actions are buffer-local in config/lsp.lua; health works without a client.
+map("n", "<Leader>li", "<Cmd>checkhealth vim.lsp<CR>", opts("LSP health"))
+map("n", "<Leader>lm", "<Cmd>Mason<CR>", opts("language server packages"))
 
 -- Diagnostic navigation
-map("n", "]d",         vim.diagnostic.goto_next,    opts("next diagnostic"))
-map("n", "[d",         vim.diagnostic.goto_prev,    opts("previous diagnostic"))
+map("n", "]d", function() vim.diagnostic.jump({ count = vim.v.count1 }) end, opts("next diagnostic"))
+map("n", "[d", function() vim.diagnostic.jump({ count = -vim.v.count1 }) end, opts("previous diagnostic"))
 map("n", "<Leader>le", vim.diagnostic.open_float,   opts("show diagnostic"))
 
 
@@ -136,7 +121,7 @@ local function toggle_float_term()
 
   -- Turn the buffer into a terminal on first open
   if vim.bo[_term.buf].buftype ~= "terminal" then
-    vim.fn.termopen(vim.o.shell)
+    vim.fn.jobstart(vim.o.shell, { term = true })
   end
   vim.cmd("startinsert")
 end
