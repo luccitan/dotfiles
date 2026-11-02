@@ -15,6 +15,9 @@ cask "ghostty"
 
 # --- Generic development-related stuff ---------------------------------------
 brew "nvim"
+brew "tree-sitter-cli"                  # Neovim parser generation (not the npm package)
+brew "ripgrep"                          # fzf-lua project search
+brew "fd"                               # project.nvim file/session browsing
 
 # --- Generic CLI tools -------------------------------------------------------
 brew "fzf"                              # Powerful CLI fuzzy file finder

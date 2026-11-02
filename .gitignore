@@ -6,7 +6,6 @@
 # Specific files
 nvim/.config/nvim/undodir
 nvim/.config/nvim/plugin
-nvim/.config/nvim/lazy-lock.json
 
 # Swap files
 *.swp
